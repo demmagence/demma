@@ -220,8 +220,12 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-3 gap-gutter max-w-4xl mx-auto">
               {/* Team Member 1 */}
-              <div className="flex flex-col items-center text-center p-6 group">
-                <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:border-primary">
+              <a 
+                href="https://github.com/wibisanabama" 
+                rel="noopener noreferrer" 
+                className="flex flex-col items-center text-center p-6 group cursor-pointer"
+              >
+                <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
                     alt="Bama — GitHub Profile" 
                     className="w-full h-full object-cover" 
@@ -230,11 +234,15 @@ export default function Home() {
                     height={128}
                   />
                 </div>
-                <h4 className="font-title-lg text-title-lg text-on-surface font-bold group-hover:text-primary transition-colors duration-200">Bama</h4>
-              </div>
+                <h4 className="font-title-lg text-title-lg text-on-surface font-bold">Bama</h4>
+              </a>
               {/* Team Member 2 */}
-              <div className="flex flex-col items-center text-center p-6 group">
-                <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:border-primary">
+              <a 
+                href="https://github.com/Derylfabiensyah" 
+                rel="noopener noreferrer" 
+                className="flex flex-col items-center text-center p-6 group cursor-pointer"
+              >
+                <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
                     alt="Deryl — GitHub Profile" 
                     className="w-full h-full object-cover" 
@@ -243,11 +251,15 @@ export default function Home() {
                     height={128}
                   />
                 </div>
-                <h4 className="font-title-lg text-title-lg text-on-surface font-bold group-hover:text-primary transition-colors duration-200">Deryl</h4>
-              </div>
+                <h4 className="font-title-lg text-title-lg text-on-surface font-bold">Deryl</h4>
+              </a>
               {/* Team Member 3 */}
-              <div className="flex flex-col items-center text-center p-6 group">
-                <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:border-primary">
+              <a 
+                href="https://github.com/ALIFKA-HUB" 
+                rel="noopener noreferrer" 
+                className="flex flex-col items-center text-center p-6 group cursor-pointer"
+              >
+                <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
                     alt="Alifka — GitHub Profile" 
                     className="w-full h-full object-cover" 
@@ -256,8 +268,8 @@ export default function Home() {
                     height={128}
                   />
                 </div>
-                <h4 className="font-title-lg text-title-lg text-on-surface font-bold group-hover:text-primary transition-colors duration-200">Alifka</h4>
-              </div>
+                <h4 className="font-title-lg text-title-lg text-on-surface font-bold">Alifka</h4>
+              </a>
             </div>
           </div>
         </section>
