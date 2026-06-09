@@ -365,7 +365,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-surface-container-highest dark:bg-inverse-surface w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col items-center gap-gutter mt-base">
+      <footer className="bg-surface-container-highest dark:bg-inverse-surface w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col items-center gap-gutter">
         <div className="flex flex-col items-center gap-4">
           <span className="font-title-lg text-title-lg font-black text-primary flex items-center">
             <Image 
@@ -377,14 +377,8 @@ export default function Home() {
             />
             Demma Intelligence
           </span>
-          <span className="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface">© 2026 Demma Intelligence. All rights reserved.</span>
+          <span className="font-body-md text-body-md text-[#49454F]">© 2026 Demma Intelligence. All rights reserved.</span>
         </div>
-        <nav className="flex flex-wrap justify-center gap-6">
-          <a className="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="https://github.com/demmagence">GitHub</a>
-          <a className="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="https://github.com/demmagence/demma#readme">Documentation</a>
-          <a className="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
-          <a className="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
-        </nav>
       </footer>
     </div>
   );
