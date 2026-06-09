@@ -78,7 +78,7 @@ export async function POST(request: Request) {
           </div>
           
           <p style="color: #747685; font-size: 12px; text-align: center; margin-top: 24px; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">
-            This email was sent from the contact form at demma-intelligence.com
+            This email was sent from the contact form at <a href="https://demma.vercel.app/" style="color: #003db4; text-decoration: none;">demma.vercel.app</a>
           </p>
         </div>
       `,
