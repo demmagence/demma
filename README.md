@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Demma Intelligence
 
-## Getting Started
+Demma Intelligence is a modern web platform crafted to showcase open-source projects, team members, and handle secure contact inquiries with a clean, responsive interface. Built with a focus on intelligence and a human touch.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Table of Contents
+1. [Core Features](#core-features)
+2. [Tech Stack](#tech-stack)
+3. [Project Directory Structure](#project-directory-structure)
+4. [Getting Started & Local Setup](#getting-started--local-setup)
+5. [Environment Variables](#environment-variables)
+6. [Building and Deployment](#building-and-deployment)
+
+---
+
+## Core Features
+
+- **Responsive Landing Page**: Built using modern UI guidelines, utilizing Tailwind CSS v4 with custom responsive spacing tokens and theme values.
+- **Open-Source Projects Grid**: Fully responsive project showcases featuring active repositories like the CBT App (built with Dart) and Demma Web.
+- **Interactive Team Members Section**: Beautiful circular profile cards linking directly to their respective GitHub profiles. Includes premium custom spring elevation animations on hover (`shadow-xl` and `-translate-y-2` offset) designed to look consistent with project cards.
+- **Secure Email Contact Form**: Fully validated frontend form coupled with an API route (`/api/contact`) powered by **Nodemailer** to securely dispatch customer inquiries directly to the team's inbox.
+- **Translation-Safe UI**: Icon ligatures are protected with custom `translate="no"` attributes and `notranslate` classes to ensure Material Symbols render correctly even when translation tools (like Google Translate) are active.
+
+---
+
+## Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router, TypeScript)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: [Material Symbols Outlined](https://fonts.google.com/icons)
+- **Typography**: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+- **Email Dispatcher**: [Nodemailer](https://nodemailer.com/)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+
+---
+
+## Project Directory Structure
+
+```text
+├── app/
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts         # Secure Nodemailer API handler
+│   ├── globals.css              # Theme tokens & custom utility typographies
+│   ├── layout.tsx               # Root layout, Plus Jakarta Sans, and icon loading
+│   └── page.tsx                 # Fully interactive main landing page
+├── public/
+│   └── images/                  # Core image assets (logo, profile pictures)
+├── package.json                 # Project scripts and dependencies
+├── pnpm-lock.yaml               # Package lockfile
+├── tsconfig.json                # TypeScript configuration
+└── README.md                    # Project documentation
 ```
 
+---
+
+## Getting Started & Local Setup
+
+To run this project locally, ensure you have Node.js and `pnpm` installed on your machine.
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/demmagence/demma.git
+cd demma
+```
+
+### 2. Install dependencies
+```bash
+pnpm install
+```
+
+### 3. Setup Environment Variables
+Create a `.env.local` file in the root directory and configure the Gmail SMTP credentials (see [Environment Variables](#environment-variables) for details):
+```bash
+cp .env.example .env.local  # Or create it manually
+```
+
+### 4. Run the development server
+```bash
+pnpm dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+The email backend integration requires the following environment variables. Store these inside a local file named `.env.local` (this file is ignored by Git to keep credentials secure):
 
-To learn more about Next.js, take a look at the following resources:
+```env
+GMAIL_USER=your-email@gmail.com
+GMAIL_APP_PASSWORD=your-gmail-app-password
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> [!IMPORTANT]
+> The `GMAIL_APP_PASSWORD` must be a **16-digit App Password** generated from your Google Account settings, rather than your standard Gmail account password. Ensure that Multi-Factor Authentication is enabled on the sending account to generate this.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Building and Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Build for Production
+To create an optimized production build, run:
+```bash
+pnpm build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Deploy to Vercel
+The easiest way to deploy this Next.js application is via the [Vercel Platform](https://vercel.com/new). Make sure to configure the same environment variables (`GMAIL_USER` and `GMAIL_APP_PASSWORD`) in the Project Settings dashboard on Vercel.
