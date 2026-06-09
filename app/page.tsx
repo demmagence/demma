@@ -142,9 +142,9 @@ export default function Home() {
             <div className="relative h-[400px] md:h-[500px] flex justify-center items-center">
               <div className="absolute inset-0 bg-secondary-container/10 rounded-full blur-3xl animate-pulse"></div>
               <Image 
-                alt="A stylized, friendly-looking robot illustration standing against a clean white background, embodying the 'human touch' in AI." 
+                alt="Demma Intelligence Logo" 
                 className="relative z-10 w-full max-w-md object-contain drop-shadow-2xl" 
-                src="/images/hero-robot.png" 
+                src="/images/logo.png" 
                 width={448}
                 height={448}
                 priority
@@ -369,8 +369,8 @@ export default function Home() {
         <div className="flex flex-col items-center gap-4">
           <span className="font-title-lg text-title-lg font-black text-primary flex items-center">
             <Image 
-              src="/images/footer-icon.png" 
-              alt="Demma Intelligence Icon" 
+              src="/images/logo.png" 
+              alt="Demma Intelligence Logo" 
               width={32}
               height={32}
               className="h-8 w-8 object-contain inline-block mr-2" 
