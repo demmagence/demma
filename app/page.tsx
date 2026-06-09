@@ -124,7 +124,7 @@ export default function Home() {
               <div className="pt-6 flex flex-wrap gap-4">
                 <a 
                   href="https://github.com/orgs/demmagence/repositories" 
-                  className="bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-primary-container transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 flex items-center gap-2"
+                  className="bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-primary-container transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center gap-2 w-60"
                 >
                   Explore Projects
                   <span className="material-symbols-outlined">arrow_forward</span>
@@ -132,7 +132,7 @@ export default function Home() {
                 <a 
                   href="https://github.com/demmagence" 
                   rel="noopener noreferrer" 
-                  className="bg-surface-container border border-outline-variant text-on-surface font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-surface-container-high transition-all duration-300 active:scale-95 flex items-center gap-2"
+                  className="bg-surface-container border border-outline-variant text-on-surface font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-surface-container-high transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 w-60"
                 >
                   View on GitHub
                   <span className="material-symbols-outlined">code</span>
