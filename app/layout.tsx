@@ -9,7 +9,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Demma Intelligence | AI for Good",
+  title: "Demma Intelligence",
   description: "We build AI-driven platforms that prioritize collaboration, clarity, and positive impact. Empowering teams to write better code and solve complex problems seamlessly.",
 };
 
