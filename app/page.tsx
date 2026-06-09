@@ -70,7 +70,7 @@ export default function Home() {
               aria-label="Menu" 
               className="md:hidden p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors"
             >
-              <span className="material-symbols-outlined select-none">
+              <span className="material-symbols-outlined notranslate select-none" translate="no">
                 {mobileMenuOpen ? 'close' : 'menu'}
               </span>
             </button>
@@ -127,7 +127,7 @@ export default function Home() {
                   className="bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-primary-container transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center gap-2 w-60"
                 >
                   Explore Projects
-                  <span className="material-symbols-outlined">arrow_forward</span>
+                  <span className="material-symbols-outlined notranslate" translate="no">arrow_forward</span>
                 </a>
                 <a 
                   href="https://github.com/demmagence" 
@@ -135,7 +135,7 @@ export default function Home() {
                   className="bg-surface-container border border-outline-variant text-on-surface font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-surface-container-high transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 w-60"
                 >
                   View on GitHub
-                  <span className="material-symbols-outlined">code</span>
+                  <span className="material-symbols-outlined notranslate" translate="no">code</span>
                 </a>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function Home() {
               <div className="bg-surface rounded-2xl p-8 border border-outline-variant hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                 <div className="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center mb-6 text-on-primary-container">
-                  <span className="material-symbols-outlined" data-weight="fill">quiz</span>
+                  <span className="material-symbols-outlined notranslate" data-weight="fill" translate="no">quiz</span>
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">CBT App</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
@@ -180,7 +180,7 @@ export default function Home() {
                     href="https://github.com/demmagence/cbt-app" 
                     rel="noopener noreferrer" 
                   >
-                    View on GitHub <span className="material-symbols-outlined text-sm">open_in_new</span>
+                    View on GitHub <span className="material-symbols-outlined notranslate text-sm" translate="no">open_in_new</span>
                   </a>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function Home() {
               <div className="bg-surface rounded-2xl p-8 border border-outline-variant hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                 <div className="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center mb-6 text-on-secondary-container">
-                  <span className="material-symbols-outlined" data-weight="fill">language</span>
+                  <span className="material-symbols-outlined notranslate" data-weight="fill" translate="no">language</span>
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Demma Intelligence Web</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
@@ -203,7 +203,7 @@ export default function Home() {
                     href="https://github.com/demmagence/demma" 
                     rel="noopener noreferrer" 
                   >
-                    View on GitHub <span className="material-symbols-outlined text-sm">open_in_new</span>
+                    View on GitHub <span className="material-symbols-outlined notranslate text-sm" translate="no">open_in_new</span>
                   </a>
                 </div>
               </div>
@@ -285,7 +285,7 @@ export default function Home() {
 
               {formSubmitted ? (
                 <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded-2xl flex flex-col items-center gap-3 animate-in fade-in duration-300">
-                  <span className="material-symbols-outlined text-green-600 text-4xl select-none" data-weight="fill">check_circle</span>
+                  <span className="material-symbols-outlined notranslate text-green-600 text-4xl select-none" data-weight="fill" translate="no">check_circle</span>
                   <h4 className="font-title-lg text-title-lg font-bold text-green-900">Message Sent!</h4>
                   <p className="font-body-md text-center">Thank you for reaching out. We will get back to you as soon as possible.</p>
                 </div>
@@ -334,7 +334,7 @@ export default function Home() {
                   </div>
                   {formError && (
                     <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-xl flex items-center gap-3">
-                      <span className="material-symbols-outlined text-red-600 select-none">error</span>
+                      <span className="material-symbols-outlined notranslate text-red-600 select-none" translate="no">error</span>
                       <p className="font-body-md text-sm">{formError}</p>
                     </div>
                   )}
@@ -354,7 +354,7 @@ export default function Home() {
                     ) : (
                       <>
                         Send Message
-                        <span className="material-symbols-outlined text-[18px]">send</span>
+                        <span className="material-symbols-outlined notranslate text-[18px]" translate="no">send</span>
                       </>
                     )}
                   </button>
