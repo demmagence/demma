@@ -77,7 +77,7 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center gap-base">
             <a className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 px-4 py-2 rounded-full" href="#projects">Projects</a>
-            <a className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 px-4 py-2 rounded-full" href="#about">Teams</a>
+            <a className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 px-4 py-2 rounded-full" href="#teams">Teams</a>
             <a className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 px-4 py-2 rounded-full" href="#contact">Contact</a>
           </nav>
         </div>
@@ -95,7 +95,7 @@ export default function Home() {
             <a 
               onClick={() => setMobileMenuOpen(false)}
               className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 px-4 py-3 rounded-xl block text-left" 
-              href="#about"
+              href="#teams"
             >
               Teams
             </a>
@@ -212,7 +212,7 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section className="min-h-[calc(100vh-64px)] flex items-center px-margin-mobile md:px-margin-desktop bg-surface-container-low scroll-mt-16" id="about">
+        <section className="min-h-[calc(100vh-64px)] flex items-center px-margin-mobile md:px-margin-desktop bg-surface-container-low scroll-mt-16" id="teams">
           <div className="max-w-[1440px] mx-auto w-full py-12">
             <div className="text-center mb-16">
               <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold mb-4">Meet the Team</h2>
