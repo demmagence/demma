@@ -164,8 +164,14 @@ export default function Home() {
               {/* Project Card 1 */}
               <div className="bg-surface rounded-2xl p-8 border border-outline-variant hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center mb-6 text-on-primary-container">
-                  <span className="material-symbols-outlined notranslate" data-weight="fill" translate="no">quiz</span>
+                <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 p-2">
+                  <Image 
+                    src="/images/cbt.png" 
+                    alt="CBT App Logo" 
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">CBT App</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
@@ -187,8 +193,14 @@ export default function Home() {
               {/* Project Card 2 */}
               <div className="bg-surface rounded-2xl p-8 border border-outline-variant hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center mb-6 text-on-secondary-container">
-                  <span className="material-symbols-outlined notranslate" data-weight="fill" translate="no">language</span>
+                <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6 p-2">
+                  <Image 
+                    src="/images/robot.png" 
+                    alt="Demma Intelligence Logo" 
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Demma Intelligence Web</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
