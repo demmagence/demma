@@ -160,65 +160,124 @@ export default function Home() {
               <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold mb-4">Our Projects</h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Open-source initiatives designed to foster innovation and learning.</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-gutter max-w-5xl mx-auto">
-              {/* Project Card 1 */}
-              <div className="bg-surface rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-gutter max-w-6xl mx-auto">
+              {/* Project Card 1 - CBT App */}
+              <a href="https://github.com/demmagence/cbt-app" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                 <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 p-2">
-                  <Image 
-                    src="/images/cbt.png" 
-                    alt="CBT App Logo" 
+                  <Image
+                    src="/images/cbt.png"
+                    alt="CBT App Logo"
                     width={48}
                     height={48}
                     className="h-full w-full object-contain"
                   />
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">CBT App</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
                   A comprehensive computer-based testing application built with Dart. Designed for robust performance and scalable assessments.
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                     <span className="w-2 h-2 rounded-full bg-blue-500"></span> Dart
                   </span>
-                  <a 
-                    className="text-primary font-label-lg text-label-lg hover:text-primary-container flex items-center gap-1 transition-colors" 
-                    href="https://github.com/demmagence/cbt-app" 
-                    rel="noopener noreferrer" 
-                  >
-                    View on GitHub <span className="material-symbols-outlined notranslate text-sm" translate="no">open_in_new</span>
-                  </a>
                 </div>
-              </div>
-              {/* Project Card 2 */}
-              <div className="bg-surface rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
+              </a>
+              {/* Project Card 2 - Demma */}
+              <a href="https://github.com/demmagence/demma" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                 <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6 p-2">
-                  <Image 
-                    src="/images/robot.png" 
-                    alt="Demma Intelligence Logo" 
+                  <Image
+                    src="/images/robot.png"
+                    alt="Demma Intelligence Web Logo"
                     width={48}
                     height={48}
                     className="h-full w-full object-contain"
                   />
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Demma</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
                   The official home for our open-source initiatives. A modern, responsive web presence built with TypeScript and advanced UI patterns.
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                     <span className="w-2 h-2 rounded-full bg-blue-600"></span> TypeScript
                   </span>
-                  <a 
-                    className="text-primary font-label-lg text-label-lg hover:text-primary-container flex items-center gap-1 transition-colors" 
-                    href="https://github.com/demmagence/demma" 
-                    rel="noopener noreferrer" 
-                  >
-                    View on GitHub <span className="material-symbols-outlined notranslate text-sm" translate="no">open_in_new</span>
-                  </a>
                 </div>
-              </div>
+              </a>
+              {/* Project Card 3 - GlowMatch */}
+              <a href="https://github.com/demmagence/glowmatch" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6">
+                  <span className="material-symbols-outlined notranslate select-none text-primary" translate="no">spa</span>
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">GlowMatch</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  An intelligent beauty and skincare recommendation platform that matches users with personalized product suggestions using AI.
+                </p>
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <span className="w-2 h-2 rounded-full bg-blue-400"></span> Flutter
+                  </span>
+                </div>
+              </a>
+              {/* Project Card 4 - Solvera */}
+              <a href="https://github.com/demmagence/solvera" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6">
+                  <span className="material-symbols-outlined notranslate select-none text-secondary" translate="no">cases</span>
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Solvera</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  A TypeScript-powered problem-solving platform that streamlines workflows and helps teams tackle complex challenges collaboratively.
+                </p>
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <span className="w-2 h-2 rounded-full bg-blue-600"></span> TypeScript
+                  </span>
+                </div>
+              </a>
+              {/* Project Card 5 - OmniAgent Studio */}
+              <a href="https://github.com/demmagence/omniagent-studio" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6">
+                  <span className="material-symbols-outlined notranslate select-none text-primary" translate="no">account_tree</span>
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">OmniAgent Studio</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  A visual studio for building, testing, and deploying multi-agent AI workflows. Designed for developers who want full control over agent orchestration.
+                </p>
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <span className="w-2 h-2 rounded-full bg-blue-600"></span> TypeScript
+                  </span>
+                </div>
+              </a>
+              {/* Project Card 6 - Kassa */}
+              <a href="https://github.com/demmagence/kassa" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6">
+                  <span className="material-symbols-outlined notranslate select-none text-secondary" translate="no">payments</span>
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Kassa</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  A modern point-of-sale and cashier management system supporting multi-language workflows and real-time transaction processing.
+                </p>
+                <div className="flex items-center gap-2 mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <span className="w-2 h-2 rounded-full bg-blue-600"></span> TypeScript
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <span className="w-2 h-2 rounded-full bg-yellow-500"></span> Python
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
@@ -239,7 +298,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Bama â€” GitHub Profile" 
+                    alt="Bama — GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-bama.png" 
                     width={128}
@@ -256,7 +315,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Deryl â€” GitHub Profile" 
+                    alt="Deryl — GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-deryl.png" 
                     width={128}
@@ -273,7 +332,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Alifka â€” GitHub Profile" 
+                    alt="Alifka — GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-alifka.png" 
                     width={128}
@@ -389,7 +448,7 @@ export default function Home() {
             />
             Demma Intelligence
           </span>
-          <span className="font-body-md text-body-md text-[#49454F]">Â© 2026 Demma Intelligence. All rights reserved.</span>
+          <span className="font-body-md text-body-md text-[#49454F]">© 2026 Demma Intelligence. All rights reserved.</span>
         </div>
       </footer>
     </div>
