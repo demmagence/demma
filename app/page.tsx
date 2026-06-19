@@ -184,30 +184,7 @@ export default function Home() {
                   </span>
                 </div>
               </a>
-              {/* Project Card 2 - Demma */}
-              <a href="https://github.com/demmagence/demma" rel="noopener noreferrer"
-                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6 p-2">
-                  <Image
-                    src="/images/robot.png"
-                    alt="Demma Intelligence Web Logo"
-                    width={48}
-                    height={48}
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Demma</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
-                  The official home for our open-source initiatives. A modern, responsive web presence built with TypeScript and advanced UI patterns.
-                </p>
-                <div className="flex items-center justify-between mt-auto">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" /> TypeScript
-                  </span>
-                </div>
-              </a>
-              {/* Project Card 3 - GlowMatch */}
+              {/* Project Card 2 - GlowMatch */}
               <a href="https://github.com/demmagence/glowmatch" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
@@ -224,7 +201,7 @@ export default function Home() {
                   </span>
                 </div>
               </a>
-              {/* Project Card 4 - Solvera */}
+              {/* Project Card 3 - Solvera */}
               <a href="https://github.com/demmagence/solvera" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
@@ -241,7 +218,7 @@ export default function Home() {
                   </span>
                 </div>
               </a>
-              {/* Project Card 5 - OmniAgent Studio */}
+              {/* Project Card 4 - OmniAgent Studio */}
               <a href="https://github.com/demmagence/omniagent-studio" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
@@ -258,7 +235,7 @@ export default function Home() {
                   </span>
                 </div>
               </a>
-              {/* Project Card 6 - Kassa */}
+              {/* Project Card 5 - Kassa */}
               <a href="https://github.com/demmagence/kassa" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
