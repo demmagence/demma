@@ -179,7 +179,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <span className="w-2 h-2 rounded-full bg-blue-500"></span> Dart
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" className="w-4 h-4" /> Dart
                   </span>
                   <a 
                     className="text-primary font-label-lg text-label-lg hover:text-primary-container flex items-center gap-1 transition-colors" 
@@ -208,7 +208,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <span className="w-2 h-2 rounded-full bg-blue-600"></span> TypeScript
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" /> TypeScript
                   </span>
                   <a 
                     className="text-primary font-label-lg text-label-lg hover:text-primary-container flex items-center gap-1 transition-colors" 
@@ -239,7 +239,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Bama — GitHub Profile" 
+                    alt="Bama â€” GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-bama.png" 
                     width={128}
@@ -256,7 +256,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Deryl — GitHub Profile" 
+                    alt="Deryl â€” GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-deryl.png" 
                     width={128}
@@ -273,7 +273,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Alifka — GitHub Profile" 
+                    alt="Alifka â€” GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-alifka.png" 
                     width={128}
@@ -389,7 +389,7 @@ export default function Home() {
             />
             Demma Intelligence
           </span>
-          <span className="font-body-md text-body-md text-[#49454F]">© 2026 Demma Intelligence. All rights reserved.</span>
+          <span className="font-body-md text-body-md text-[#49454F]">Â© 2026 Demma Intelligence. All rights reserved.</span>
         </div>
       </footer>
     </div>
