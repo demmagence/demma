@@ -202,7 +202,7 @@ export default function Home() {
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Demma Intelligence Web</h3>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Demma</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
                   The official home for our open-source initiatives. A modern, responsive web presence built with TypeScript and advanced UI patterns.
                 </p>
@@ -239,7 +239,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Bama — GitHub Profile" 
+                    alt="Bama â€” GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-bama.png" 
                     width={128}
@@ -256,7 +256,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Deryl — GitHub Profile" 
+                    alt="Deryl â€” GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-deryl.png" 
                     width={128}
@@ -273,7 +273,7 @@ export default function Home() {
               >
                 <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
                   <Image 
-                    alt="Alifka — GitHub Profile" 
+                    alt="Alifka â€” GitHub Profile" 
                     className="w-full h-full object-cover" 
                     src="/images/team-alifka.png" 
                     width={128}
@@ -389,7 +389,7 @@ export default function Home() {
             />
             Demma Intelligence
           </span>
-          <span className="font-body-md text-body-md text-[#49454F]">© 2026 Demma Intelligence. All rights reserved.</span>
+          <span className="font-body-md text-body-md text-[#49454F]">Â© 2026 Demma Intelligence. All rights reserved.</span>
         </div>
       </footer>
     </div>
