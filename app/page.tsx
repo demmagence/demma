@@ -184,7 +184,7 @@ export default function Home() {
                   </span>
                 </div>
               </a>
-              {/* Project Card 2 - Demma Intelligence Web */}
+              {/* Project Card 2 - Demma */}
               <a href="https://github.com/demmagence/demma" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
@@ -197,7 +197,7 @@ export default function Home() {
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Demma Intelligence Web</h3>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Demma</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
                   The official home for our open-source initiatives. A modern, responsive web presence built with TypeScript and advanced UI patterns.
                 </p>
