@@ -132,7 +132,7 @@ export default function Home() {
                 <a 
                   href="https://github.com/demmagence" 
                   rel="noopener noreferrer" 
-                  className="bg-surface-container border border-outline-variant text-on-surface font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-surface-container-high transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 w-60"
+                  className="bg-surface-container text-on-surface font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-surface-container-high transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 w-60"
                 >
                   View on GitHub
                   <span className="material-symbols-outlined notranslate" translate="no">code</span>
@@ -162,7 +162,7 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-2 gap-gutter max-w-5xl mx-auto">
               {/* Project Card 1 */}
-              <div className="bg-surface rounded-2xl p-8 border border-outline-variant hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
+              <div className="bg-surface rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                 <div className="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center mb-6 text-on-primary-container">
                   <span className="material-symbols-outlined notranslate" data-weight="fill" translate="no">quiz</span>
@@ -185,7 +185,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Project Card 2 */}
-              <div className="bg-surface rounded-2xl p-8 border border-outline-variant hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
+              <div className="bg-surface rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
                 <div className="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center mb-6 text-on-secondary-container">
                   <span className="material-symbols-outlined notranslate" data-weight="fill" translate="no">language</span>
@@ -277,7 +277,7 @@ export default function Home() {
         {/* Contact Section */}
         <section className="min-h-[calc(100vh-64px)] flex items-center px-margin-mobile md:px-margin-desktop bg-surface-container-lowest scroll-mt-16" id="contact">
           <div className="max-w-[1440px] mx-auto flex justify-center w-full py-12">
-            <div className="w-full max-w-2xl bg-surface p-8 md:p-12 rounded-3xl border border-outline-variant shadow-sm relative overflow-hidden">
+            <div className="w-full max-w-2xl bg-surface p-8 md:p-12 rounded-3xl shadow-sm relative overflow-hidden">
               <div className="text-center mb-10">
                 <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold mb-3">Get in Touch</h2>
                 <p className="font-body-md text-body-md text-on-surface-variant">Have a project in mind or want to collaborate? Send us a message.</p>
