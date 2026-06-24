@@ -187,34 +187,23 @@ export default function Home() {
               {/* Project Card 2 - GlowMatch */}
               <a href="https://github.com/demmagence/glowmatch" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined notranslate select-none text-primary" translate="no">spa</span>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6 p-0.5">
+                  <Image
+                    src="/images/glowmatch.png"
+                    alt="GlowMatch Logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">GlowMatch</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
-                  An intelligent beauty and skincare recommendation platform that matches users with personalized product suggestions using AI.
+                  An AI-powered beauty and skincare platform that matches users with personalized product suggestions.
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" className="w-4 h-4" /> Flutter
-                  </span>
-                </div>
-              </a>
-              {/* Project Card 3 - Solvera */}
-              <a href="https://github.com/demmagence/solvera" rel="noopener noreferrer"
-                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined notranslate select-none text-secondary" translate="no">cases</span>
-                </div>
-                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Solvera</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
-                  A TypeScript-powered problem-solving platform that streamlines workflows and helps teams tackle complex challenges collaboratively.
-                </p>
-                <div className="flex items-center justify-between mt-auto">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" /> TypeScript
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" className="w-4 h-4" /> Dart
                   </span>
                 </div>
               </a>
@@ -227,7 +216,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">OmniAgent Studio</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
-                  A visual studio for building, testing, and deploying multi-agent AI workflows. Designed for developers who want full control over agent orchestration.
+                  A visual studio for building, testing, and deploying multi-agent AI workflows with full developer control.
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
@@ -238,13 +227,19 @@ export default function Home() {
               {/* Project Card 5 - Kassa */}
               <a href="https://github.com/demmagence/kassa" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined notranslate select-none text-secondary" translate="no">payments</span>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 p-0.5">
+                  <Image
+                    src="/images/kassa.png"
+                    alt="Kassa Logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Kassa</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
-                  A modern point-of-sale and cashier management system supporting multi-language workflows and real-time transaction processing.
+                  A modern point-of-sale and cashier system supporting multi-language workflows and real-time transactions.
                 </p>
                 <div className="flex items-center gap-2 mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
@@ -317,6 +312,44 @@ export default function Home() {
                   />
                 </div>
                 <h4 className="font-title-lg text-title-lg text-on-surface font-bold">Alifka</h4>
+              </a>
+            </div>
+
+            {/* Second Row: 2 members centered */}
+            <div className="flex flex-col md:flex-row justify-center gap-gutter max-w-4xl mx-auto mt-gutter">
+              {/* Team Member 4 */}
+              <a 
+                href="https://github.com/Adityaaaxz" 
+                rel="noopener noreferrer" 
+                className="flex flex-col items-center text-center p-6 group cursor-pointer w-full md:w-[282px]"
+              >
+                <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
+                  <Image 
+                    alt="Aditya - GitHub Profile" 
+                    className="w-full h-full object-cover" 
+                    src="/images/team-aditya.png" 
+                    width={128}
+                    height={128}
+                  />
+                </div>
+                <h4 className="font-title-lg text-title-lg text-on-surface font-bold">Aditya</h4>
+              </a>
+              {/* Team Member 5 */}
+              <a 
+                href="https://github.com/xernom-gt" 
+                rel="noopener noreferrer" 
+                className="flex flex-col items-center text-center p-6 group cursor-pointer w-full md:w-[282px]"
+              >
+                <div className="w-32 h-32 rounded-full bg-surface-container-highest mb-6 overflow-hidden border-4 border-surface shadow-md relative transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2">
+                  <Image 
+                    alt="Cahya - GitHub Profile" 
+                    className="w-full h-full object-cover" 
+                    src="/images/team-cahya.png" 
+                    width={128}
+                    height={128}
+                  />
+                </div>
+                <h4 className="font-title-lg text-title-lg text-on-surface font-bold">Cahya</h4>
               </a>
             </div>
           </div>
