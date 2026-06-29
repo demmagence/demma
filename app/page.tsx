@@ -277,7 +277,7 @@ export default function Home() {
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">VibEco</h3>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Eco</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
                   An eco-friendly Flutter app featuring AI waste scanning, a chatbot, weather monitoring, and environmental insights.
                 </p>
