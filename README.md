@@ -17,9 +17,9 @@ Demma Intelligence is a modern web platform crafted to showcase open-source proj
 ## Core Features
 
 - **Responsive Landing Page**: Built using modern UI guidelines, utilizing Tailwind CSS v4 with custom responsive spacing tokens and theme values.
-- **Open-Source Projects Grid**: Fully responsive project showcases featuring active repositories like the CBT App (built with Dart) and Demma Web.
+- **Open-Source Projects Grid**: Fully responsive project showcases featuring active repositories — CBT App (Dart), GlowMatch (Dart), OmniAgent Studio (TypeScript), and Kassa (TypeScript / Python).
 - **Interactive Team Members Section**: Beautiful circular profile cards linking directly to their respective GitHub profiles. Includes premium custom spring elevation animations on hover (`shadow-xl` and `-translate-y-2` offset) designed to look consistent with project cards.
-- **Secure Email Contact Form**: Fully validated frontend form coupled with an API route (`/api/contact`) powered by **Nodemailer** to securely dispatch customer inquiries directly to the team's inbox.
+- **Secure Email Contact Form**: Fully validated frontend form coupled with an API route (`/api/contact`) powered by **Nodemailer** to securely dispatch customer inquiries directly to the team's inbox. Protected against abuse with a honeypot field and per-IP rate limiting, and against email header injection by sanitizing submitted values.
 - **Translation-Safe UI**: Icon ligatures are protected with custom `translate="no"` attributes and `notranslate` classes to ensure Material Symbols render correctly even when translation tools (like Google Translate) are active.
 
 ---
@@ -42,12 +42,14 @@ Demma Intelligence is a modern web platform crafted to showcase open-source proj
 ├── app/
 │   ├── api/
 │   │   └── contact/
-│   │       └── route.ts         # Secure Nodemailer API handler
+│   │       └── route.ts         # Secure Nodemailer API handler (honeypot + rate limit)
 │   ├── globals.css              # Theme tokens & custom utility typographies
 │   ├── layout.tsx               # Root layout, Plus Jakarta Sans, and icon loading
 │   └── page.tsx                 # Fully interactive main landing page
 ├── public/
+│   ├── icons/                   # Self-hosted tech-stack SVGs (Dart, TypeScript, Python)
 │   └── images/                  # Core image assets (logo, profile pictures)
+├── next.config.ts               # Next.js config (next/image SVG settings)
 ├── package.json                 # Project scripts and dependencies
 ├── pnpm-lock.yaml               # Package lockfile
 ├── tsconfig.json                # TypeScript configuration
