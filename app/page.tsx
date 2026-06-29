@@ -198,7 +198,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" className="w-4 h-4" /> Dart
+                    <Image src="/icons/dart-original.svg" alt="Dart" width={16} height={16} className="w-4 h-4" /> Dart
                   </span>
                 </div>
               </a>
@@ -220,7 +220,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" className="w-4 h-4" /> Dart
+                    <Image src="/icons/dart-original.svg" alt="Dart" width={16} height={16} className="w-4 h-4" /> Dart
                   </span>
                 </div>
               </a>
@@ -236,7 +236,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" /> TypeScript
+                    <Image src="/icons/typescript-original.svg" alt="TypeScript" width={16} height={16} className="w-4 h-4" /> TypeScript
                   </span>
                 </div>
               </a>
@@ -258,10 +258,10 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-2 mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" /> TypeScript
+                    <Image src="/icons/typescript-original.svg" alt="TypeScript" width={16} height={16} className="w-4 h-4" /> TypeScript
                   </span>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="w-4 h-4" /> Python
+                    <Image src="/icons/python-original.svg" alt="Python" width={16} height={16} className="w-4 h-4" /> Python
                   </span>
                 </div>
               </a>
