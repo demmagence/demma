@@ -472,7 +472,7 @@ export default function Home() {
             />
             Demma Intelligence
           </span>
-          <span className="font-body-md text-body-md text-[#49454F]">© 2026 Demma Intelligence. All rights reserved.</span>
+          <span className="font-body-md text-body-md text-on-surface-variant">© 2026 Demma Intelligence. All rights reserved.</span>
         </div>
       </footer>
     </div>
