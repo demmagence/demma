@@ -1,9 +1,43 @@
 import nodemailer from 'nodemailer';
 
+// Simple in-memory rate limiter. Note: on serverless this is per-instance
+// and resets on cold start, so it is a lightweight burst guard rather than a
+// strict global limit. For stronger guarantees use a shared store (e.g. Redis).
+const RATE_LIMIT_MAX = 5; // requests allowed per window
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+const rateLimitHits = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const windowStart = now - RATE_LIMIT_WINDOW_MS;
+  const hits = (rateLimitHits.get(ip) ?? []).filter((t) => t > windowStart);
+  hits.push(now);
+  rateLimitHits.set(ip, hits);
+  return hits.length > RATE_LIMIT_MAX;
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, message } = body;
+    const { name, email, message, website } = body;
+
+    // Honeypot: real users never see or fill the "website" field. If it has a
+    // value, silently accept the request without sending so bots get no signal.
+    if (typeof website === 'string' && website.trim() !== '') {
+      return Response.json({ success: true, message: 'Email sent successfully.' }, { status: 200 });
+    }
+
+    // Rate limit by client IP
+    const ip =
+      request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+      request.headers.get('x-real-ip') ||
+      'unknown';
+    if (isRateLimited(ip)) {
+      return Response.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      );
+    }
 
     // Validate required fields
     if (!name || !email || !message) {
