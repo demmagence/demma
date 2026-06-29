@@ -43,12 +43,16 @@ export async function POST(request: Request) {
       },
     });
 
+    // Strip control characters (incl. CR/LF) to prevent email header injection
+    const safeName = name.replace(/[\r\n\t]+/g, ' ').trim();
+
     // Compose the email
     const mailOptions = {
       from: `"Demma Intelligence Website" <${gmailUser}>`,
       to: 'demmagence@gmail.com',
-      replyTo: `"${name}" <${email}>`,
-      subject: `[Contact Form] New message from ${name}`,
+      // Use the address-object form so Nodemailer encodes the display name safely
+      replyTo: { name: safeName, address: email },
+      subject: `[Contact Form] New message from ${safeName}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
         <div style="font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background-color: #fdf8fd; border-radius: 16px;">
