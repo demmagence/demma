@@ -290,6 +290,28 @@ export default function Home() {
                   </span>
                 </div>
               </a>
+              {/* Project Card 7 - Lost and Found */}
+              <a href="https://github.com/demmagence/lost-and-found" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 p-1">
+                  <Image
+                    src="/images/lostandfound.png"
+                    alt="Lost and Found Logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Lost and Found</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  A comprehensive SaaS application designed for efficiently managing lost and found items.
+                </p>
+                <div className="flex items-center gap-2 mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <Image src="/icons/dart-original.svg" alt="Dart" width={16} height={16} className="w-4 h-4" /> Dart
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
