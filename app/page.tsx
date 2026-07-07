@@ -228,7 +228,13 @@ export default function Home() {
               <a href="https://github.com/demmagence/omniagent-studio" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 p-1">
-                  <span className="material-symbols-outlined notranslate select-none text-primary text-[40px]" translate="no">account_tree</span>
+                  <Image
+                    src="/images/omniagent-logo.png"
+                    alt="OmniAgent Studio Logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">OmniAgent Studio</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
