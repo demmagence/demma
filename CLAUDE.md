@@ -17,7 +17,7 @@ No test runner is configured.
 
 ## Architecture
 
-Single-page marketing website for Demma Intelligence. All visible content lives in one file (`app/page.tsx`) as a client component (`"use client"`) with scroll-anchor sections: `#projects`, `#about`, `#contact`. The only backend is a single API route (`app/api/contact/route.ts`) that sends email via Nodemailer over Gmail SMTP.
+Single-page marketing website for Demma Intelligence. All visible content lives in one file (`app/page.tsx`) as a client component (`"use client"`) with scroll-anchor sections: `#projects`, `#teams`, `#contact`. The only backend is a single API route (`app/api/contact/route.ts`) that sends email via Nodemailer over Gmail SMTP.
 
 **Data flow for contact form:**
 `app/page.tsx` (form state + fetch) → `POST /api/contact` → Nodemailer → Gmail SMTP
@@ -27,7 +27,7 @@ Single-page marketing website for Demma Intelligence. All visible content lives 
 GMAIL_USER=...
 GMAIL_APP_PASSWORD=...
 ```
-The API route checks for these at runtime and returns 500 if missing.
+The API route checks for these at runtime and returns 500 if missing. It also guards against abuse with a hidden honeypot field (`website`) and a per-IP in-memory rate limit.
 
 ## Styling System
 

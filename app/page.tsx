@@ -9,6 +9,7 @@ export default function Home() {
   const [formError, setFormError] = useState('');
   const [formLoading, setFormLoading] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [honeypot, setHoneypot] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -26,7 +27,7 @@ export default function Home() {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, website: honeypot }),
       });
 
       const data = await response.json();
@@ -127,7 +128,16 @@ export default function Home() {
                   className="bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-primary-container transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center gap-2 w-60"
                 >
                   Explore Projects
-                  <span className="material-symbols-outlined notranslate" translate="no">arrow_forward</span>
+                  <svg
+                    viewBox="0 0 16 16"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    className="shrink-0"
+                  >
+                    <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z" />
+                  </svg>
                 </a>
                 <a 
                   href="https://github.com/demmagence" 
@@ -135,7 +145,16 @@ export default function Home() {
                   className="bg-surface-container text-on-surface font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-surface-container-high transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 w-60"
                 >
                   View on GitHub
-                  <span className="material-symbols-outlined notranslate" translate="no">code</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    className="shrink-0"
+                  >
+                    <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.05.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.21.7.82.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -164,8 +183,7 @@ export default function Home() {
               {/* Project Card 1 - CBT App */}
               <a href="https://github.com/demmagence/cbt-app" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 p-2">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6">
                   <Image
                     src="/images/cbt.png"
                     alt="CBT App Logo"
@@ -180,15 +198,14 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" className="w-4 h-4" /> Dart
+                    <Image src="/icons/dart-original.svg" alt="Dart" width={16} height={16} className="w-4 h-4" /> Dart
                   </span>
                 </div>
               </a>
               {/* Project Card 2 - GlowMatch */}
               <a href="https://github.com/demmagence/glowmatch" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6 p-0.5">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 p-1">
                   <Image
                     src="/images/glowmatch.png"
                     alt="GlowMatch Logo"
@@ -197,21 +214,20 @@ export default function Home() {
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">GlowMatch</h3>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">GlowMatch.</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
                   An AI-powered beauty and skincare platform that matches users with personalized product suggestions.
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" className="w-4 h-4" /> Dart
+                    <Image src="/icons/dart-original.svg" alt="Dart" width={16} height={16} className="w-4 h-4" /> Dart
                   </span>
                 </div>
               </a>
               {/* Project Card 4 - OmniAgent Studio */}
               <a href="https://github.com/demmagence/omniagent-studio" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 p-1">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 p-1">
                   <Image
                     src="/images/omniagent-logo.png"
                     alt="OmniAgent Studio Logo"
@@ -226,15 +242,14 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" /> TypeScript
+                    <Image src="/icons/typescript-original.svg" alt="TypeScript" width={16} height={16} className="w-4 h-4" /> TypeScript
                   </span>
                 </div>
               </a>
               {/* Project Card 5 - Kassa */}
               <a href="https://github.com/demmagence/kassa" rel="noopener noreferrer"
                 className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                <div className="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 p-0.5">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 p-1">
                   <Image
                     src="/images/kassa.png"
                     alt="Kassa Logo"
@@ -249,10 +264,57 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-2 mt-auto">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" /> TypeScript
+                    <Image src="/icons/typescript-original.svg" alt="TypeScript" width={16} height={16} className="w-4 h-4" /> TypeScript
                   </span>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="w-4 h-4" /> Python
+                    <Image src="/icons/python-original.svg" alt="Python" width={16} height={16} className="w-4 h-4" /> Python
+                  </span>
+                </div>
+              </a>
+              {/* Project Card 6 - VibEco */}
+              <a href="https://github.com/demmagence/eco" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 p-1">
+                  <Image
+                    src="/images/eco.png"
+                    alt="VibEco Logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Eco</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  An eco-friendly Flutter app featuring AI waste scanning, a chatbot, weather monitoring, and environmental insights.
+                </p>
+                <div className="flex items-center gap-2 mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <Image src="/icons/dart-original.svg" alt="Dart" width={16} height={16} className="w-4 h-4" /> Dart
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <Image src="/icons/javascript-original.svg" alt="JavaScript" width={16} height={16} className="w-4 h-4" /> JavaScript
+                  </span>
+                </div>
+              </a>
+              {/* Project Card 7 - Lost and Found */}
+              <a href="https://github.com/demmagence/lost-and-found" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 p-1">
+                  <Image
+                    src="/images/lostandfound.png"
+                    alt="Lost and Found Logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Lost and Found</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  A comprehensive SaaS application designed for efficiently managing lost and found items.
+                </p>
+                <div className="flex items-center gap-2 mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <Image src="/icons/dart-original.svg" alt="Dart" width={16} height={16} className="w-4 h-4" /> Dart
                   </span>
                 </div>
               </a>
@@ -378,6 +440,19 @@ export default function Home() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot field — hidden from real users, traps bots */}
+                  <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
+                    <label htmlFor="website">Website</label>
+                    <input
+                      id="website"
+                      name="website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                    />
+                  </div>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="font-label-lg text-label-lg text-on-surface block" htmlFor="name">Name</label>
@@ -464,7 +539,7 @@ export default function Home() {
             />
             Demma Intelligence
           </span>
-          <span className="font-body-md text-body-md text-[#49454F]">© 2026 Demma Intelligence. All rights reserved.</span>
+          <span className="font-body-md text-body-md text-on-surface-variant">© 2026 Demma Intelligence. All rights reserved.</span>
         </div>
       </footer>
     </div>
