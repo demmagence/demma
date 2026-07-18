@@ -318,6 +318,28 @@ export default function Home() {
                   </span>
                 </div>
               </a>
+              {/* Project Card 8 - Mories */}
+              <a href="https://github.com/demmagence/mories" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 p-1">
+                  <Image
+                    src="/images/mories.png"
+                    alt="Mories Logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Mories</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  A mobile application built with Kotlin and Jetpack Compose for browsing and watching movies and series.
+                </p>
+                <div className="flex items-center gap-2 mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <Image src="/icons/kotlin-original.svg" alt="Kotlin" width={16} height={16} className="w-4 h-4" /> Kotlin
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
