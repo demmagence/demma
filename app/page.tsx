@@ -340,6 +340,28 @@ export default function Home() {
                   </span>
                 </div>
               </a>
+              {/* Project Card 9 - Walas */}
+              <a href="https://github.com/demmagence/walas" rel="noopener noreferrer"
+                className="bg-surface rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col relative overflow-hidden">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 p-1">
+                  <Image
+                    src="/images/walas.png"
+                    alt="Walas Logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <h3 className="font-title-lg text-title-lg font-bold text-on-surface mb-3">Walas</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-3 line-clamp-3">
+                  A web-based school management application designed to facilitate homeroom teachers (wali kelas) in managing student databases, daily logs, and grades.
+                </p>
+                <div className="flex items-center gap-2 mt-auto">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                    <Image src="/icons/javascript-original.svg" alt="JavaScript" width={16} height={16} className="w-4 h-4" /> JavaScript
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
