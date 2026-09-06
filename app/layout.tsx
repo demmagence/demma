@@ -1,39 +1,28 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Newsreader, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { RouteScrollReset } from "./components/route-scroll-reset";
+import { SiteFooter } from "./components/site-footer";
+import { SiteHeader } from "./components/site-header";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
-});
+const newsreader = Newsreader({ variable: "--font-newsreader", subsets: ["latin"], display: "swap" });
+const jakarta = Plus_Jakarta_Sans({ variable: "--font-jakarta", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Demma Intelligence",
-  description: "We build AI-driven platforms that prioritize collaboration, clarity, and positive impact. Empowering teams to write better code and solve complex problems seamlessly.",
-  icons: {
-    icon: "/images/logo.png",
-  },
+  metadataBase: new URL("https://demma.vercel.app"),
+  icons: { icon: "/images/logo.png" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${plusJakartaSans.variable} h-full antialiased`}
-    >
-      <head>
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${newsreader.variable} ${jakarta.variable}`}>
+      <body>
+        <RouteScrollReset />
+        <a className="skip-link" href="#content">Skip to content</a>
+        <SiteHeader locale="en" />
+        <div id="content">{children}</div>
+        <SiteFooter locale="en" />
+      </body>
     </html>
   );
 }
