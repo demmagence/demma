@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowIcon } from "./arrow-icon";
 import { copy, pagePaths, projects, type Locale, type PageKey } from "../data";
 
 const pageKeys: PageKey[] = ["about", "projects", "team", "contact"];
@@ -21,7 +20,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             <h2 className="footer-heading-spacer" aria-hidden="true">{c.nav.projects}</h2>
             {projects.slice(4).map((project) => <Link href={`/projects/${project.slug}`} key={project.name}>{project.name}</Link>)}
           </div>
-          <div><h2>{c.nav.contact}</h2><a href="mailto:demmagence@gmail.com">Email</a><a href="https://github.com/demmagence" target="_blank" rel="noreferrer">GitHub <ArrowIcon className="arrow-icon" /></a></div>
+          <div><h2>{c.nav.contact}</h2><a href="mailto:demmagence@gmail.com">Email</a><a href="https://github.com/demmagence" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.instagram.com/demmagence" target="_blank" rel="noreferrer">Instagram</a></div>
         </div>
         <p className="copyright">© 2026 {c.rights}</p>
       </div>
