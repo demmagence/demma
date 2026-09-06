@@ -51,7 +51,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <SectionHeading eyebrow={c.selected} title={c.projectsLead} />
         <div className="project-list">
           {projects.map((project, index) => (
-            <Link className="project-row" href={`/projects/${project.slug}?from=home`} key={project.name}>
+            <Link className="project-row" href={`/projects/${project.slug}?from=/`} key={project.name}>
               <span className="row-number">{String(index + 1).padStart(2, "0")}</span>
               <Image src={project.image} alt="" width={56} height={56} />
               <strong>{project.name}</strong>
