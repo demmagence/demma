@@ -14,6 +14,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   const c = copy[locale];
 
   return (
+    <>
     <header className="site-header">
       <div className="header-inner">
         <Link className="wordmark" href="/" aria-label="Demma Intelligence">
@@ -36,9 +37,12 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       <nav id="mobile-menu" className={`mobile-nav ${open ? "is-open" : ""}`} aria-label="Mobile navigation">
         {keys.map((key, index) => {
           const href = pagePaths[key] ? `/${pagePaths[key]}` : "/";
-          return <Link key={key} href={href} onClick={() => setOpen(false)}><span>0{index + 1}</span>{c.nav[key]}</Link>;
+          const active = pathname === href;
+          return <Link key={key} href={href} aria-current={active ? "page" : undefined} onClick={() => setOpen(false)}><span>0{index + 1}</span>{c.nav[key]}</Link>;
         })}
       </nav>
     </header>
+    {open ? <button className="mobile-nav-backdrop" type="button" onClick={() => setOpen(false)} aria-label={c.close} /> : null}
+    </>
   );
 }

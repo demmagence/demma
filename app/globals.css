@@ -200,10 +200,12 @@ button, input, textarea { font: inherit; }
   .page-shell, .header-inner, .footer-inner { width: min(calc(100% - 32px), 1200px); }
   .desktop-nav { display: none; }
   .menu-button { display: block; }
-  .mobile-nav { position: absolute; top: 100%; left: 0; right: 0; padding: 1rem 16px 1.5rem; background: var(--navy); color: white; flex-direction: column; }
+  .mobile-nav { position: absolute; top: 100%; left: 0; right: 0; z-index: 2; padding: 1rem 16px 1.5rem; background: var(--cream); flex-direction: column; }
   .mobile-nav.is-open { display: flex; }
-  .mobile-nav a { margin-bottom: 0.35rem; padding: 0.9rem; border-radius: 8px; background: rgba(255,255,255,0.06); font-size: 1.35rem; font-weight: 600; }
+  .mobile-nav a { margin-bottom: 0.35rem; padding: 0.9rem; border-radius: 8px; background: var(--navy); color: var(--cream-light); font-size: 1.35rem; font-weight: 600; }
+  .mobile-nav a:hover, .mobile-nav a[aria-current="page"] { background: var(--cobalt); }
   .mobile-nav a span { margin-right: 0.75rem; color: var(--coral); font-size: 0.65rem; }
+  .mobile-nav-backdrop { display: none; }
   .home-hero, .page-hero { grid-template-columns: 1fr; gap: 2.5rem; }
   .home-hero, .page-hero { padding-block: 5rem; }
   .page-hero { min-height: auto; }
@@ -219,6 +221,10 @@ button, input, textarea { font: inherit; }
   .footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-columns > div:first-child,
   .footer-columns > div:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 900px) {
+  .mobile-nav-backdrop { position: fixed; z-index: 40; inset: 74px 0 0; display: block; width: 100%; border: 0; background: rgba(16, 27, 76, 0.24); cursor: default; }
 }
 
 @media (max-width: 620px) {
