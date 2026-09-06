@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import type { Project } from "../data";
 import { ArrowIcon } from "./arrow-icon";
+import { ProjectBackLink } from "./project-back-link";
 
 type ProjectDetailPageProps = {
   project: Project;
@@ -13,10 +15,9 @@ type ProjectDetailPageProps = {
 export function ProjectDetailPage({ project, index, previous, next }: ProjectDetailPageProps) {
   return (
     <main className="project-detail page-shell">
-      <Link className="project-detail-back" href="/projects">
-        <ArrowIcon className="arrow-icon arrow-icon-back" />
-        Back to projects
-      </Link>
+      <Suspense fallback={<Link className="project-detail-back" href="/projects"><ArrowIcon className="arrow-icon arrow-icon-back" />Back to projects</Link>}>
+        <ProjectBackLink />
+      </Suspense>
 
       <section className="project-detail-hero">
         <div className="project-detail-copy">
