@@ -111,7 +111,7 @@ export function ProjectsPage({ locale }: { locale: Locale }) {
   return (
     <main className="inner-page page-shell">
       <header className="page-hero"><h1>{c.projectsTitle}</h1><p>{c.projectsIntro}</p></header>
-      <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.name}><Link className="project-card-main" href={`/projects/${project.slug}`} aria-label={`View ${project.name} project`}><div className="card-top"><span>{String(index + 1).padStart(2, "0")}</span><Image className={project.name === "GlowMatch." ? "project-logo-glowmatch" : undefined} src={project.image} alt={`${project.name} logo`} width={72} height={72} /></div><h2>{project.name}</h2><p>{project.summary}</p><div className="project-tags">{project.icons.map((icon, iconIndex) => <span key={project.tech[iconIndex]}><Image src={`/icons/${icon}`} alt="" width={17} height={17} />{project.tech[iconIndex]}</span>)}</div></Link></article>)}</div>
+      <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.name}><Link className="project-card-main" href={`/projects/${project.slug}`} aria-label={`View ${project.name} project`}><div className="card-top"><span>{String(index + 1).padStart(2, "0")}</span><Image className={project.name === "GlowMatch." ? "project-logo-glowmatch" : undefined} src={project.image} alt={`${project.name} logo`} width={72} height={72} /></div><h2>{project.name}</h2><p>{project.summary}</p><div className="project-tags">{project.cardTech.map(({ icon, name }) => <span key={name}><Image src={`/icons/${icon}`} alt="" width={17} height={17} />{name}</span>)}</div></Link></article>)}</div>
     </main>
   );
 }
