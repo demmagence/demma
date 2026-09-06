@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     // Honeypot: real users never see or fill the "website" field. If it has a
     // value, silently accept the request without sending so bots get no signal.
     if (typeof website === 'string' && website.trim() !== '') {
-      return Response.json({ success: true, message: 'Email sent successfully.' }, { status: 200 });
+      return Response.json({ success: true, code: 'SENT', message: 'Email sent successfully.' }, { status: 200 });
     }
 
     // Rate limit by client IP
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       'unknown';
     if (isRateLimited(ip)) {
       return Response.json(
-        { error: 'Too many requests. Please try again later.' },
+        { code: 'RATE_LIMITED', error: 'Too many requests. Please try again later.' },
         { status: 429 }
       );
     }
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
     // Validate required fields
     if (!name || !email || !message) {
       return Response.json(
-        { error: 'All fields (name, email, message) are required.' },
+        { code: 'MISSING_FIELDS', error: 'All fields (name, email, message) are required.' },
         { status: 400 }
       );
     }
@@ -51,7 +51,7 @@ export async function POST(request: Request) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return Response.json(
-        { error: 'Invalid email format.' },
+        { code: 'INVALID_EMAIL', error: 'Invalid email format.' },
         { status: 400 }
       );
     }
@@ -63,7 +63,7 @@ export async function POST(request: Request) {
     if (!gmailUser || !gmailAppPassword) {
       console.error('Missing GMAIL_USER or GMAIL_APP_PASSWORD environment variables.');
       return Response.json(
-        { error: 'Email service is not configured. Please contact the administrator.' },
+        { code: 'SERVICE_UNAVAILABLE', error: 'Email service is not configured. Please contact the administrator.' },
         { status: 500 }
       );
     }
@@ -89,35 +89,35 @@ export async function POST(request: Request) {
       subject: `[Contact Form] New message from ${safeName}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
-        <div style="font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background-color: #fdf8fd; border-radius: 16px;">
-          <div style="background: linear-gradient(135deg, #003db4, #2b57d0); padding: 24px 32px; border-radius: 12px; margin-bottom: 24px;">
-            <h1 style="color: #FFFFFF; margin: 0; font-size: 20px; font-weight: 700; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">New Contact Form Message</h1>
-            <p style="color: #d4dbff; margin: 8px 0 0 0; font-size: 14px; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">From Demma Intelligence Website</p>
-          </div>
-          
-          <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #c4c5d6;">
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr>
-                <td style="padding: 12px 16px; border-bottom: 1px solid #e5e1e7; color: #434654; font-weight: 600; width: 100px; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">Name</td>
-                <td style="padding: 12px 16px; border-bottom: 1px solid #e5e1e7; color: #1c1b1f; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">${escapeHtml(name)}</td>
-              </tr>
-              <tr>
-                <td style="padding: 12px 16px; border-bottom: 1px solid #e5e1e7; color: #434654; font-weight: 600; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">Email</td>
-                <td style="padding: 12px 16px; border-bottom: 1px solid #e5e1e7; color: #1c1b1f; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">
-                  <a href="mailto:${escapeHtml(email)}" style="color: #003db4; text-decoration: none;">${escapeHtml(email)}</a>
-                </td>
-              </tr>
-            </table>
-            
-            <div style="margin-top: 20px; padding: 16px; background-color: #f1ecf2; border-radius: 8px;">
-              <p style="color: #434654; font-weight: 600; margin: 0 0 8px 0; font-size: 14px; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">Message</p>
-              <p style="color: #1c1b1f; margin: 0; line-height: 1.6; white-space: pre-wrap; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">${escapeHtml(message)}</p>
+        <div style="margin:0;padding:32px 16px;background:#f3efe4;color:#101b4c;font-family:'Plus Jakarta Sans','Segoe UI',Arial,sans-serif;">
+          <div style="max-width:620px;margin:0 auto;">
+            <div style="padding:36px;background:#ff8589;border-radius:20px;">
+              <p style="margin:0 0 28px;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">Demma Intelligence</p>
+              <h1 style="max-width:500px;margin:0;font-size:36px;line-height:1.05;letter-spacing:-1.5px;color:#101b4c;">A new message has arrived.</h1>
+              <p style="margin:18px 0 0;font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.5;color:#101b4c;">Someone reached out through the Demma website.</p>
             </div>
+
+            <div style="margin-top:12px;padding:32px;background:#fbf8f0;border-radius:20px;">
+              <div style="margin-bottom:12px;padding:18px 20px;background:#f3efe4;border-radius:12px;">
+                <p style="margin:0 0 7px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff4038;">Name</p>
+                <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:1.4;color:#101b4c;">${escapeHtml(name)}</p>
+              </div>
+
+              <div style="margin-bottom:12px;padding:18px 20px;background:#f3efe4;border-radius:12px;">
+                <p style="margin:0 0 7px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff4038;">Email</p>
+                <a href="mailto:${escapeHtml(email)}" style="font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:1.4;color:#2d58ce;text-decoration:none;word-break:break-word;">${escapeHtml(email)}</a>
+              </div>
+
+              <div style="padding:22px 20px;background:#101b4c;border-radius:12px;">
+                <p style="margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff8589;">Message</p>
+                <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:1.6;white-space:pre-wrap;color:#fbf8f0;">${escapeHtml(message)}</p>
+              </div>
+
+              <a href="mailto:${escapeHtml(email)}" style="display:inline-block;margin-top:24px;padding:14px 18px;background:#2d58ce;border-radius:6px;color:#ffffff;font-size:11px;font-weight:700;letter-spacing:.7px;text-decoration:none;text-transform:uppercase;">Reply to ${escapeHtml(safeName)}</a>
+            </div>
+
+            <p style="margin:22px 0 0;text-align:center;font-size:11px;line-height:1.5;color:#3e4563;">Sent from the contact form at <a href="https://demma.vercel.app/" style="color:#2d58ce;text-decoration:none;">demma.vercel.app</a></p>
           </div>
-          
-          <p style="color: #747685; font-size: 12px; text-align: center; margin-top: 24px; font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;">
-            This email was sent from the contact form at <a href="https://demma.vercel.app/" style="color: #003db4; text-decoration: none;">demma.vercel.app</a>
-          </p>
         </div>
       `,
     };
@@ -126,13 +126,13 @@ export async function POST(request: Request) {
     await transporter.sendMail(mailOptions);
 
     return Response.json(
-      { success: true, message: 'Email sent successfully.' },
+      { success: true, code: 'SENT', message: 'Email sent successfully.' },
       { status: 200 }
     );
   } catch (error) {
     console.error('Failed to send email:', error);
     return Response.json(
-      { error: 'Failed to send email. Please try again later.' },
+      { code: 'SEND_FAILED', error: 'Failed to send email. Please try again later.' },
       { status: 500 }
     );
   }
