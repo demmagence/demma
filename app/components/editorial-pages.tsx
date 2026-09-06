@@ -131,7 +131,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
   return (
     <main className="inner-page page-shell contact-page">
       <header className="page-hero"><h1>{c.contactTitle}</h1><p>{c.contactIntro}</p></header>
-      <section className="contact-layout"><aside><p className="eyebrow">{c.direct}</p><a href="mailto:demmagence@gmail.com">demmagence@gmail.com</a><a href="https://github.com/demmagence" target="_blank" rel="noreferrer">github.com/demmagence</a></aside><ContactForm locale={locale} /></section>
+      <section className="contact-layout"><aside><p className="eyebrow">{c.direct}</p><a href="mailto:demmagence@gmail.com">demmagence@gmail.com</a><a href="https://github.com/demmagence" target="_blank" rel="noreferrer">github.com/demmagence</a><a href="https://www.instagram.com/demmagence" target="_blank" rel="noreferrer">instagram.com/demmagence</a></aside><ContactForm locale={locale} /></section>
     </main>
   );
 }
