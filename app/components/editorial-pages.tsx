@@ -11,7 +11,7 @@ function Arrow() {
 function SectionHeading({ eyebrow, title, href, link }: { eyebrow: string; title: string; href?: string; link?: string }) {
   return (
     <header className="section-heading">
-      <p className="eyebrow">{eyebrow}</p>
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : <span aria-hidden="true" />}
       <div>
         <h2>{title}</h2>
         {href && link ? <Link className="text-link" href={href}>{link}<Arrow /></Link> : null}
@@ -99,7 +99,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         <Image src="/images/logo.png" alt="Demma Intelligence robot" width={480} height={480} sizes="(max-width: 700px) 80vw, 40vw" />
       </section>
       <section className="principles">
-        <SectionHeading eyebrow="01" title={c.principles} />
+        <SectionHeading eyebrow="" title={c.principles} />
         <div className="principle-grid">{c.principleItems.map(([number, heading, body]) => <article key={number}><span>{number}</span><h3>{heading}</h3><p>{body}</p></article>)}</div>
       </section>
     </main>
